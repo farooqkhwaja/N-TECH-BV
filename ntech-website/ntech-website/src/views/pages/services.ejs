@@ -1,0 +1,111 @@
+<%- include('../partials/header', { title: title, currentPage: currentPage }) %>
+
+<!-- Page Header -->
+<section class="hero" style="
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(44, 95, 125, 0.85), rgba(91, 164, 184, 0.85)), 
+  url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80') center/cover;
+">
+  <div class="hero-container">
+    <h1>Onze Diensten</h1>
+    <p>Professionele oplossingen voor industriële uitdagingen</p>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Wat Wij Bieden</h2>
+    <div class="cards-grid">
+      <% services.forEach(service => { %>
+        <div class="card">
+          <div class="card-icon">
+            <%- include('../partials/icon', { name: service.icon, size: 60 }) %>
+          </div>
+          <h3><%= service.title %></h3>
+          <p><%= service.description %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">Onze Werkwijze</h2>
+    <div class="company-info">
+      <div class="info-box">
+        <h3>Stap 1: Intake & Analyse</h3>
+        <p>
+          We beginnen met een grondige intake om uw specifieke behoeften en wensen 
+          te begrijpen. Dit vormt de basis voor een succesvol project.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>Stap 2: Planning & Voorbereiding</h3>
+        <p>
+          Op basis van de intake maken we een gedetailleerd plan en bereiden we 
+          alle benodigde materialen en resources voor.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>Stap 3: Uitvoering</h3>
+        <p>
+          Met vakmanschap en precisie voeren we het project uit volgens planning, 
+          met constante aandacht voor kwaliteit en veiligheid.
+        </p>
+      </div>
+      <div class="info-box">
+        <h3>Stap 4: Oplevering & Nazorg</h3>
+        <p>
+          Na afronding leveren we het project netjes op en blijven beschikbaar 
+          voor eventuele vragen of aanpassingen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries We Serve -->
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Sectoren Waarin Wij Actief Zijn</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">
+          <%- include('../partials/icon', { name: 'factory', size: 60 }) %>
+        </div>
+        <h3>Metaalindustrie</h3>
+        <p>Complete dienstverlening voor de metaalindustrie, van bewerking tot montage.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <%- include('../partials/icon', { name: 'building', size: 60 }) %>
+        </div>
+        <h3>Bouwsector</h3>
+        <p>Industriële montage en metaalconstructies voor de bouwsector.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <%- include('../partials/icon', { name: 'cog', size: 60 }) %>
+        </div>
+        <h3>Industrie</h3>
+        <p>Ondersteuning van industriële processen en productie-installaties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section section-dark">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Heeft U Een Project?</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+      Neem vrijblijvend contact met ons op om de mogelijkheden te bespreken.
+    </p>
+    <a href="/contact" class="btn btn-primary">Neem Contact Op</a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
