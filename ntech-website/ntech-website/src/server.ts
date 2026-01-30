@@ -12,7 +12,11 @@ import entecServicesRoutes from './routes/entecServicesRoutes';
 import contactRoutes from './routes/contactRoutes';
 
 // Environment variables laden
-dotenv.config();
+dotenv.config({
+  path: path.resolve(process.cwd(), '.env')
+});
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS bestaat:', !!process.env.EMAIL_PASS);
 
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
