@@ -1,0 +1,24 @@
+<%- include('../partials/header', { title: title, currentPage: currentPage }) %>
+
+<!-- 404 Section -->
+<section class="section section-light" style="min-height: 60vh; display: flex; align-items: center;">
+  <div class="container" style="text-align: center;">
+    <div style="margin-bottom: 2rem;">
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#2c5f7d" stroke-width="2">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    </div>
+    <h1 style="font-size: 4rem; color: var(--primary-blue); margin-bottom: 1rem;">404</h1>
+    <h2 style="margin-bottom: 2rem;">Pagina Niet Gevonden</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--text-medium);">
+      De pagina die u zoekt bestaat niet of is verplaatst. 
+      Gebruik het menu om terug te navigeren naar onze website.
+    </p>
+    <div class="btn-group">
+      <a href="/" class="btn btn-primary">Terug naar Home</a>
+      <a href="/contact" class="btn btn-secondary" style="background: var(--primary-teal); color: var(--neutral-white); border-color: var(--primary-teal);">Neem Contact Op</a>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
