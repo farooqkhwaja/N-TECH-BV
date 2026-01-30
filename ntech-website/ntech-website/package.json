@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc && xcopy src\\views dist\\views /E /I /Y && xcopy src\\public dist\\public /E /I /Y",
+    "build": "tsc && cpy \"src/views/**\" dist/views && cpy \"src/public/**\" dist/public",
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
