@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Formulier validatie
   initFormValidation();
   
-  // Mobile menu (voor toekomstige uitbreiding)
-  // initMobileMenu();
+  // Mobile menu
+  initMobileMenu();
 });
 
 /**
@@ -81,17 +81,43 @@ function initFormValidation() {
 }
 
 /**
- * Mobile menu toggle (voor toekomstige uitbreiding)
- * Kan geactiveerd worden wanneer mobile menu geïmplementeerd is
+ * Mobile menu toggle
  */
 function initMobileMenu() {
-  const toggleBtn = document.querySelector('.mobile-menu-toggle');
-  const nav = document.querySelector('.nav');
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('mobileNav');
   
   if (toggleBtn && nav) {
-    toggleBtn.addEventListener('click', () => {
+    // Toggle menu bij klik op hamburger
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       nav.classList.toggle('active');
       toggleBtn.classList.toggle('active');
+    });
+    
+    // Sluit menu bij klik op een link
+    const navLinks = nav.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        toggleBtn.classList.remove('active');
+      });
+    });
+    
+    // Sluit menu bij klik buiten het menu
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+        nav.classList.remove('active');
+        toggleBtn.classList.remove('active');
+      }
+    });
+    
+    // Sluit menu bij escape toets
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        toggleBtn.classList.remove('active');
+      }
     });
   }
 }

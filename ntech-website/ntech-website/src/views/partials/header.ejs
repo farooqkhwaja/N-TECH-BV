@@ -12,22 +12,58 @@
 <body>
   <header class="header">
     <div class="header-container">
-     <!-- Logo -->
-<div class="logo-container">
-  <a href="/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
-    <img
-      src="/images/logo.jpg"
-      alt="Entec BV logo"
-      style="width: 50px; height: 50px; object-fit: contain;"
-    />
-    <span style="font-size: 1.2rem; font-weight: 700; color: #2c5f7d; letter-spacing: 0.5px;">
-      N-TECH B.V.
-    </span>
-  </a>
-</div>
-
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ffffff 0%, #e8f4f8 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #2c5f7d;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          ">N</div>
+          <span class="logo-text">N-TECH B.V.</span>
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
       
       <!-- Navigation -->
-      <%- include('navigation', { currentPage: currentPage }) %>
+      <nav class="nav" id="mobileNav">
+        <a href="/" class="nav-link <%= currentPage === 'home' ? 'active' : '' %>">
+          Home
+        </a>
+        <a href="/over-ons" class="nav-link <%= currentPage === 'about' ? 'active' : '' %>">
+          Over Ons
+        </a>
+        <a href="/producten" class="nav-link <%= currentPage === 'products' ? 'active' : '' %>">
+          Producten
+        </a>
+        <a href="/diensten" class="nav-link <%= currentPage === 'services' ? 'active' : '' %>">
+          Diensten
+        </a>
+        <a href="/portfolio" class="nav-link <%= currentPage === 'portfolio' ? 'active' : '' %>">
+          Portfolio
+        </a>
+        <a href="/entec-services" class="nav-link <%= currentPage === 'entec-services' ? 'active' : '' %>">
+          Entec Services
+        </a>
+        <a href="/contact" class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>">
+          Contact
+        </a>
+      </nav>
     </div>
   </header>
