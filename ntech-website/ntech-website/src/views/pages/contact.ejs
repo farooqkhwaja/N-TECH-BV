@@ -1,0 +1,164 @@
+<%- include('../partials/header', { title: title, currentPage: currentPage }) %>
+
+<!-- Page Header -->
+<section class="hero" style="
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(44, 95, 125, 0.85), rgba(91, 164, 184, 0.85)), 
+  url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80') center/cover;
+">
+  <div class="hero-container">
+    <h1>Neem Contact Op</h1>
+    <p>We helpen u graag verder</p>
+  </div>
+</section>
+
+<!-- Contact Content -->
+<section class="section section-light">
+  <div class="container">
+    <div class="contact-content">
+      <!-- Contact Information -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Contactgegevens</h2>
+        
+        <div class="contact-info-box">
+          <div class="contact-item">
+            <strong>Contactpersoon</strong>
+            <%= contactInfo.name %>
+          </div>
+          
+          <div class="contact-item">
+            <strong>Telefoon</strong>
+            <a href="tel:<%= contactInfo.phone.replace(/\s/g, '') %>"><%= contactInfo.phone %></a>
+          </div>
+          
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:<%= contactInfo.email %>"><%= contactInfo.email %></a>
+          </div>
+          
+          <div class="contact-item">
+            <strong>Bedrijf</strong>
+            <%= contactInfo.company %>
+          </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 2rem;">
+          <h3>Bereikbaarheid</h3>
+          <p>
+            Wij zijn bereikbaar van maandag tot en met vrijdag tussen 08:00 en 17:00 uur.
+            Voor spoedzaken kunt u altijd telefonisch contact met ons opnemen.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div>
+        <h2 style="margin-bottom: 2rem;">Stuur een bericht</h2>
+        
+        <% if (typeof success !== 'undefined' && success) { %>
+          <div class="alert alert-success">
+            <%= successMessage %>
+          </div>
+        <% } %>
+        
+        <form action="/contact" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Naam *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              placeholder="Uw volledige naam"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              placeholder="uw.email@example.com"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Telefoon (optioneel)</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              placeholder="+31 6 12 34 56 78"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Onderwerp</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject"
+              placeholder="Waar gaat uw bericht over?"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Bericht *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required
+              placeholder="Vertel ons waarmee we u kunnen helpen..."
+            ></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Verstuur Bericht
+          </button>
+        </form>
+        
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+          * Verplichte velden
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Info -->
+<section class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">Hoe We U Kunnen Helpen</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">
+          <%- include('../partials/icon', { name: 'briefcase', size: 60 }) %>
+        </div>
+        <h3>Projectaanvragen</h3>
+        <p>Heeft u een project waar wij u mee kunnen helpen? Neem contact op voor een vrijblijvende offerte.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h3>Vragen</h3>
+        <p>Algemene vragen over onze diensten, producten of werkwijze? We staan voor u klaar.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <%- include('../partials/icon', { name: 'handshake', size: 60 }) %>
+        </div>
+        <h3>Samenwerking</h3>
+        <p>Geïnteresseerd in een langdurige samenwerking? Laten we kennismaken.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
