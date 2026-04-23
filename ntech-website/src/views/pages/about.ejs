@@ -1,0 +1,112 @@
+<%- include('../partials/header', { title: title, currentPage: currentPage }) %>
+
+<!-- Page Header -->
+<section class="hero" style="
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(44, 95, 125, 0.85), rgba(91, 164, 184, 0.85)), 
+  url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1600&q=80') center/cover;
+">
+  <div class="hero-container">
+    <h1>Over N-TECH B.V.</h1>
+    <p>Vakmanschap en ervaring in de metaalindustrie</p>
+  </div>
+</section>
+
+<!-- Company Info -->
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Ons Bedrijf</h2>
+    <div class="info-box" style="max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 1.1rem; line-height: 1.8;">
+        <%= companyInfo.description %>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Founder Info -->
+<section class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">Onze Specialist</h2>
+    <div class="company-info">
+      <div class="info-box">
+        <h3>Naam</h3>
+        <p><strong><%= companyInfo.founder.name %></strong></p>
+      </div>
+      <div class="info-box">
+        <h3>Ervaring</h3>
+        <p><strong><%= companyInfo.founder.experience %></strong> ervaring in de metaalindustrie</p>
+      </div>
+      <div class="info-box">
+        <h3>Specialisatie</h3>
+        <p><%= companyInfo.founder.role %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Values -->
+<section class="section section-light">
+  <div class="container">
+    <h2 class="section-title">Onze Waarden</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h3>Professionaliteit</h3>
+        <p>Wij werken altijd professioneel en met aandacht voor detail.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3>Precisie</h3>
+        <p>Nauwkeurigheid en kwaliteit staan bij elk project centraal.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Partnership</h3>
+        <p>Wij bouwen aan langdurige relaties met onze klanten.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h3>Flexibiliteit</h3>
+        <p>Wij passen ons aan uw specifieke behoeften en wensen aan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section section-dark">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Meer Weten?</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+      Ontdek onze diensten of neem direct contact met ons op.
+    </p>
+    <div class="btn-group">
+      <a href="/diensten" class="btn btn-primary">Onze Diensten</a>
+      <a href="/contact" class="btn btn-secondary" style="background: var(--neutral-white); color: var(--primary-blue);">Contact</a>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
