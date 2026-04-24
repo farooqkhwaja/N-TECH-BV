@@ -14,7 +14,7 @@ export class ContactController {
     const contactInfo = {
       name: 'Nehru Noori',
       phone: '+31 6 16 00 97 03',
-      email: 'Ntech2017@hotmail.com',
+      email: 'info@n-tech.nl',
       company: 'N-TECH BV'
     };
 
@@ -35,7 +35,7 @@ export class ContactController {
         replyTo: email,
         subject: `Nieuw contactbericht van ${name}`,
         html: `
-          <h2>Nieuw contactformulier</h2>
+          <h2>Nieuw contactformulier</h2>s
           <p><strong>Naam:</strong> ${name}</p>
           <p><strong>E-mail:</strong> ${email}</p>
           <p><strong>Bericht:</strong></p>
@@ -49,7 +49,7 @@ export class ContactController {
         contactInfo: {
           name: 'Nehru Noori',
           phone: '+31 6 16 00 97 03',
-          email: 'Ntech2017@hotmail.com',
+          email: 'info@n-tech.nl',
           company: 'N-TECH BV'
         },
         success: true,
@@ -65,7 +65,7 @@ export class ContactController {
         contactInfo: {
           name: 'Nehru Noori',
           phone: '+31 6 16 00 97 03',
-          email: 'Ntech2017@hotmail.com',
+          email: 'info@n-tech.nl',
           company: 'N-TECH BV'
         },
         error: true,
