@@ -68,26 +68,35 @@
   <div class="container">
     <h2 class="section-title">Sectoren Waarin Wij Actief Zijn</h2>
     <div class="cards-grid">
-      <div class="card">
+      <div class="card card-photo">
+        <%- include('../partials/photo', { key: 'sparks', width: 800 }) %>
+        <div class="card-body">
         <div class="card-icon">
           <%- include('../partials/icon', { name: 'factory', size: 60 }) %>
         </div>
         <h3>Metaalindustrie</h3>
         <p>Complete dienstverlening voor de metaalindustrie, van bewerking tot montage.</p>
+        </div>
       </div>
-      <div class="card">
+      <div class="card card-photo">
+        <%- include('../partials/photo', { key: 'construction', width: 800 }) %>
+        <div class="card-body">
         <div class="card-icon">
           <%- include('../partials/icon', { name: 'building', size: 60 }) %>
         </div>
         <h3>Bouwsector</h3>
         <p>Industriële montage en metaalconstructies voor de bouwsector.</p>
+        </div>
       </div>
-      <div class="card">
+      <div class="card card-photo">
+        <%- include('../partials/photo', { key: 'specialist', width: 800 }) %>
+        <div class="card-body">
         <div class="card-icon">
           <%- include('../partials/icon', { name: 'cog', size: 60 }) %>
         </div>
         <h3>Industrie</h3>
         <p>Ondersteuning van industriële processen en productie-installaties.</p>
+        </div>
       </div>
     </div>
   </div>

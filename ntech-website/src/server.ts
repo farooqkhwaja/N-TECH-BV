@@ -10,6 +10,7 @@ import servicesRoutes from './routes/servicesRoutes';
 import portfolioRoutes from './routes/portfolioRoutes';
 import entecServicesRoutes from './routes/entecServicesRoutes';
 import contactRoutes from './routes/contactRoutes';
+import { photos, photoUrl } from './utils/photos';
 
 // Environment variables laden
 dotenv.config({
@@ -24,6 +25,10 @@ const PORT = process.env.PORT || 3000;
 // View engine setup - EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+// Foto's beschikbaar maken in alle views
+app.locals.photos = photos;
+app.locals.photoUrl = photoUrl;
 
 // Middleware
 app.use(express.json());

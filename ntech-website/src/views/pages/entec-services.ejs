@@ -11,14 +11,20 @@
 <!-- Introduction -->
 <section class="section section-light">
   <div class="container">
-    <div style="max-width: 900px; margin: 0 auto;">
-      <h2 class="section-title">Over N-tech Services</h2>
-      <div class="info-box">
-        <p style="font-size: 1.1rem; line-height: 1.8;">
+    <div class="split">
+      <div class="split-text">
+        <span class="eyebrow">Over N-tech Services</span>
+        <h2>Gespecialiseerde industriële ondersteuning</h2>
+        <p class="lead">
           N-tech Services is een aparte dienstverleningstak van N-TECH B.V., gericht op 
           gespecialiseerde industriële ondersteuning. Wij bieden een breed scala aan 
           diensten die verder gaan dan traditionele montage en metaalbewerking.
         </p>
+        <a href="/contact" class="btn btn-secondary">Neem contact op</a>
+      </div>
+      <div class="collage">
+        <%- include('../partials/photo', { key: 'warehouse', width: 900, className: 'collage-main' }) %>
+        <%- include('../partials/photo', { key: 'blueprint', width: 600, className: 'collage-small' }) %>
       </div>
     </div>
   </div>
@@ -49,7 +55,7 @@
     <div class="company-info">
       <div class="info-box">
         <h3>Magazijnbeheer</h3>
-        <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
+        <ul class="check-list">
           <li>Voorraadbeheer en logistieke planning</li>
           <li>Optimalisatie van magazijnprocessen</li>
           <li>Inventarisatie en administratie</li>
@@ -59,7 +65,7 @@
       
       <div class="info-box">
         <h3>Certificering</h3>
-        <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
+        <ul class="check-list">
           <li>Ondersteuning bij certificeringsprocessen</li>
           <li>Kwaliteitsnormen en compliance</li>
           <li>Documentatie en rapportage</li>
@@ -69,7 +75,7 @@
       
       <div class="info-box">
         <h3>Industriële Ondersteuning</h3>
-        <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
+        <ul class="check-list">
           <li>Procesoptimalisatie</li>
           <li>Technische advisering</li>
           <li>Projectmanagement</li>

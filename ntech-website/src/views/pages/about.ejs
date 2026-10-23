@@ -11,11 +11,21 @@
 <!-- Company Info -->
 <section class="section section-light">
   <div class="container">
-    <h2 class="section-title">Ons Bedrijf</h2>
-    <div class="info-box" style="max-width: 800px; margin: 0 auto;">
-      <p style="font-size: 1.1rem; line-height: 1.8;">
-        <%= companyInfo.description %>
-      </p>
+    <div class="split">
+      <div class="split-text">
+        <span class="eyebrow">Ons bedrijf</span>
+        <h2>Vakmanschap en ervaring in de metaalindustrie</h2>
+        <p class="lead"><%= companyInfo.description %></p>
+        <ul class="check-list">
+          <li>Actief in de metaalindustrie en bouwsector</li>
+          <li>Opdrachten op maat, van klein tot compleet project</li>
+          <li><%= companyInfo.founder.experience %> ervaring in het vak</li>
+        </ul>
+      </div>
+      <div class="collage">
+        <%- include('../partials/photo', { key: 'specialist', width: 900, className: 'collage-main' }) %>
+        <%- include('../partials/photo', { key: 'welding', width: 600, className: 'collage-small' }) %>
+      </div>
     </div>
   </div>
 </section>

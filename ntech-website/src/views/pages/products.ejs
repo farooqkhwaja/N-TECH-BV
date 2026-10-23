@@ -11,20 +11,22 @@
 <!-- Products Content -->
 <section class="section section-light">
   <div class="container">
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <h2 class="section-title">Producten op Maat</h2>
-      <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+    <div class="split">
+    <div class="split-text">
+      <span class="eyebrow">Maatwerk</span>
+      <h2>Producten op Maat</h2>
+      <p class="lead">
         Onze producten worden op maat geleverd voor industriële toepassingen. 
         Wij werken nauw samen met onze klanten om de juiste oplossingen te vinden 
         voor hun specifieke behoeften in de metaalindustrie en bouwsector.
       </p>
       
-      <div class="info-box" style="text-align: left; margin-top: 3rem;">
+      <div class="info-box mt-2">
         <h3>Productcategorieën</h3>
         <p>
           Wij bieden een breed scala aan metaalproducten en industriële oplossingen:
         </p>
-        <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2;">
+        <ul class="check-list">
           <li>Metaalconstructies</li>
           <li>Industriële montage-onderdelen</li>
           <li>Bouwsector componenten</li>
@@ -32,13 +34,15 @@
         </ul>
       </div>
       
-      <div class="info-box" style="text-align: left; margin-top: 2rem;">
-        <h3>Meer Informatie</h3>
-        <p>
-          Voor meer informatie over onze specifieke producten en maatwerk mogelijkheden, 
-          neem contact met ons op. Wij bespreken graag uw wensen en mogelijkheden.
-        </p>
-      </div>
+      <p class="mt-2">
+        Voor meer informatie over onze specifieke producten en maatwerk mogelijkheden,
+        neem contact met ons op. Wij bespreken graag uw wensen en mogelijkheden.
+      </p>
+    </div>
+    <div class="collage">
+      <%- include('../partials/photo', { key: 'steel', width: 900, className: 'collage-main' }) %>
+      <%- include('../partials/photo', { key: 'metalwork', width: 600, className: 'collage-small' }) %>
+    </div>
     </div>
   </div>
 </section>

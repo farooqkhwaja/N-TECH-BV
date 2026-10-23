@@ -1,0 +1,10 @@
+<%
+  // Foto met merk-achtergrond als fallback: als de foto niet laadt, blijft een nette vlak over
+  const photoKey = key;
+  const photoWidth = typeof width !== 'undefined' ? width : 900;
+  const photoClass = typeof className !== 'undefined' ? className : '';
+  const photo = photos[photoKey] || { alt: '' };
+%>
+<div class="photo <%= photoClass %>">
+  <img src="<%= photoUrl(photoKey, photoWidth) %>" alt="<%= photo.alt %>" loading="lazy" decoding="async" onerror="this.remove()">
+</div>
