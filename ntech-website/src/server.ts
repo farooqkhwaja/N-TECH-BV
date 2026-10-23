@@ -49,8 +49,12 @@ app.use((req: Request, res: Response) => {
   });
 });
 
-// Server starten
-app.listen(PORT, () => {
-  console.log(`✅ N-TECH BV server draait op http://localhost:${PORT}`);
-  console.log(`🔧 Environment: ${process.env.NODE_ENV || 'development'}`);
-});
+// Server starten (alleen lokaal; op Vercel draait de app als serverless functie via api/index.ts)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`✅ N-TECH BV server draait op http://localhost:${PORT}`);
+    console.log(`🔧 Environment: ${process.env.NODE_ENV || 'development'}`);
+  });
+}
+
+export default app;

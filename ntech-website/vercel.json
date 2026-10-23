@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "src/public",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "src/views/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ]
+}
