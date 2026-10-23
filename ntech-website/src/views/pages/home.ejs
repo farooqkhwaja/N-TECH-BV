@@ -1,13 +1,10 @@
 <%- include('../partials/header', { title: title, currentPage: currentPage }) %>
 
 <!-- Hero Section -->
-<section class="hero" style="
-  background: linear-gradient(rgba(44, 95, 125, 0.85), rgba(91, 164, 184, 0.85)), 
-  url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80') center/cover;
-  position: relative;
-">
+<section class="hero" style="--hero-img: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80');">
   <div class="hero-container">
-    <h1>N-TECH B.V. – Uw partner in industriële techniek</h1>
+    <span class="hero-eyebrow">Metaalindustrie &amp; Montage</span>
+    <h1>Uw partner in industriële techniek</h1>
     <p>
       Specialist in metaalindustrie en montage met meer dan 20 jaar ervaring. 
       Wij leveren vakmanschap op maat voor de bouw- en industriesector.
@@ -16,6 +13,11 @@
       <a href="/diensten" class="btn btn-primary">Onze Diensten</a>
       <a href="/contact" class="btn btn-secondary">Neem Contact Op</a>
     </div>
+    <ul class="hero-stats">
+      <li><strong>20+</strong> jaar ervaring</li>
+      <li><strong>Maatwerk</strong> voor bouw &amp; industrie</li>
+      <li><strong>Gecertificeerd</strong> vakmanschap</li>
+    </ul>
   </div>
 </section>
 
