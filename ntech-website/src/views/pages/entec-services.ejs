@@ -1,11 +1,7 @@
 <%- include('../partials/header', { title: title, currentPage: currentPage }) %>
 
 <!-- Page Header - Different styling to distinguish from N-TECH -->
-<section class="hero" style="
-  padding: 3rem 2rem; 
-  background: linear-gradient(rgba(26, 77, 94, 0.85), rgba(61, 122, 143, 0.85)),
-  url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600&q=80') center/cover;
-">
+<section class="hero hero-page" style="--hero-img: url('https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600&q=80');">
   <div class="hero-container">
     <h1>N-tech Services</h1>
     <p style="font-size: 1.2rem;">Gespecialiseerde dienstverleningstak van N-TECH B.V.</p>
@@ -17,7 +13,7 @@
   <div class="container">
     <div style="max-width: 900px; margin: 0 auto;">
       <h2 class="section-title">Over N-tech Services</h2>
-      <div class="info-box" style="border-left-color: #3d7a8f;">
+      <div class="info-box">
         <p style="font-size: 1.1rem; line-height: 1.8;">
           N-tech Services is een aparte dienstverleningstak van N-TECH B.V., gericht op 
           gespecialiseerde industriële ondersteuning. Wij bieden een breed scala aan 
@@ -51,7 +47,7 @@
   <div class="container">
     <h2 class="section-title">Diensten in Detail</h2>
     <div class="company-info">
-      <div class="info-box" style="border-left-color: #3d7a8f;">
+      <div class="info-box">
         <h3>Magazijnbeheer</h3>
         <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
           <li>Voorraadbeheer en logistieke planning</li>
@@ -61,7 +57,7 @@
         </ul>
       </div>
       
-      <div class="info-box" style="border-left-color: #3d7a8f;">
+      <div class="info-box">
         <h3>Certificering</h3>
         <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
           <li>Ondersteuning bij certificeringsprocessen</li>
@@ -71,7 +67,7 @@
         </ul>
       </div>
       
-      <div class="info-box" style="border-left-color: #3d7a8f;">
+      <div class="info-box">
         <h3>Industriële Ondersteuning</h3>
         <ul style="margin-left: 1.5rem; margin-top: 1rem; line-height: 2; color: var(--text-medium);">
           <li>Procesoptimalisatie</li>
@@ -132,7 +128,7 @@
     </p>
     <div class="btn-group">
       <a href="/contact" class="btn btn-primary">Neem Contact Op</a>
-      <a href="/diensten" class="btn btn-secondary" style="background: var(--primary-teal); color: var(--neutral-white); border-color: var(--primary-teal);">Bekijk Alle Diensten</a>
+      <a href="/diensten" class="btn btn-secondary">Bekijk Alle Diensten</a>
     </div>
   </div>
 </section>
